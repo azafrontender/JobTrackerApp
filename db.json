@@ -1,0 +1,25 @@
+{
+  "applications": [
+    {
+      "company": "Veeam",
+      "position": "Junior Frontend Developer",
+      "location": "Prague",
+      "salary": "52000",
+      "status": "Applied",
+      "date": "2026-07-23",
+      "notes": "",
+      "id": "6L41v5RGf0k"
+    },
+    {
+      "company": "Jamf",
+      "position": "Junior Frontend Developer",
+      "location": "Brno",
+      "salary": "41000",
+      "status": "Applied",
+      "date": "2026-10-23",
+      "notes": "",
+      "id": "lnkvH2CQtIw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

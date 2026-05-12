@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <h1>Job Application Tracker</h1>
+</header>
+
+<main>
+
+    <section class="statInfo">
+        <div id="container">
+                    <div id="totalCount">
+            <span id="totalJobsCount"></span>
+        </div>
+        <div id="totalCash">
+            <span id="totalSalaryAmount"></span>
+        </div>
+        </div>
+
+    </section>
+
+
+    <div id="container">
+
+
+        <div id="modalOverlay" class="hidden">
+            <section id="addJobSection">
+                <form id="jobForm">
+                    <input type="hidden" id="jobId">
+
+                    <input type="text" id="company" placeholder="Company" required>
+                    <input type="text" id="position" placeholder="Position" required>
+                    <input type="text" id="location" placeholder="City / Country">
+
+                    <input type="number" id="salary" placeholder="Salary (in CZK)">
+                    
+                    <select id="status">
+                        <option value="Applied">Applied</option>
+                        <option value="Interview">Interview</option>
+                        <option value="Offer">Offer</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+
+                    <input type="date" id="jobdate" required>
+                    <textarea id="notes" placeholder="Notes / Resume Link"></textarea>
+
+                    <div class="formBtn">
+                        <button type="submit" id="addJobBtn">Add Job</button>
+                        <button type="button" id="closeModalBtn">Cancel</button>
+                    </div>
+                </form>
+        </section>
+        </div>
+
+        <button id="openModalBtn">+ Add New Job</button>
+
+
+        <section id="filterSection">
+            <input id="searchInput" type="text">
+            <div id="filterJob"> <p>Filter by Status</p>
+                <select name="filterStatus" id="filterStatus">
+                    <option value="All">All</option>
+                    <option value="Applied">Applied</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Offer">Offer</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+            </div>
+
+        </section>
+
+        <div id="loader" class="hidden">Loading data...</div>
+
+        <section id="jobTracker">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Position</th>
+                        <th>City / Country</th> 
+                        <th>Salary</th>         
+                        <th>Stage</th>
+                        <th>Date</th>
+                        <th>Notes</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="appBody">
+                    </tbody>
+            </table>
+        </section>
+    </div>
+</main>
+    
+
+
+<script src="main.js" type="module"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- npx json-server --watch db.json --port 3000    -->
+
